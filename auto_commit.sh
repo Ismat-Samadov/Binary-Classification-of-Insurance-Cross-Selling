@@ -10,7 +10,7 @@ echo "Last updated: $(date)" > last_updated.txt
 git add last_updated.txt
 
 # Commit changes with a message
-git commit -m "Automated commit to preserve contribution history"
+git commit -m "changed date of update"
 
 # Push changes to the remote repository
 git push origin main
