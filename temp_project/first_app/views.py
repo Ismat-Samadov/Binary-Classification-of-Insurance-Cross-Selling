@@ -1,11 +1,12 @@
 from django.shortcuts import render
-
+from first_app.models import User
 from django.http import HttpResponse
 
 
 def index(request):
-    my_dict = {'insert_me': "Hi , i am from views.py file and coming from first_app/index.html"}
-    return render(request, 'first_app/index.html', context=my_dict)
+    users_list = User.objects.order_by('birth_date')
+    birth_date_dict = {'birth_date': users_list}
+    return render(request, 'first_app/index.html', context=birth_date_dict)
 
 
 def home(request):

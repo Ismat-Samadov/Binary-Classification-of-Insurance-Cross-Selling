@@ -1,12 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>First App projects</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"/>
+<!--    <link rel="stylesheet" href="{{ STATIC_URL }}styles.css">-->
+
 </head>
 <body>
-<h1>Hello it is index.html file</h1>
-
-{{ insert_me }}
+<h1> Hi folks, it is model solutions</h1>
+<h2> Here is all users </h2>
+<div class="djangomodels">
+    {% if birth_date %}
+    <table>
+        <thead>
+        <th> First Name </th>
+        <th> Last Name </th>
+        </thead>
+    {% for date in birth_date %}
+    <tr>
+        <td>{{ date.first_name}}</td>
+        <td>{{ date.last_name}}</td>
+        <td>{{ date.email}}</td>
+        <td>{{ date.birth_date}}</td>
+    {% endfor %}
+    </tr>
+            </table>
+    {% else %}
+    <p>No Acces record Found!</p>
+    {% endif %}
+</div>
 </body>
 </html>
