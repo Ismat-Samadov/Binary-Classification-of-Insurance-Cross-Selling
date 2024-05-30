@@ -26,5 +26,5 @@ def populate(N=5):
 
 if __name__ == '__main__':
     print('Populating data')
-    populate(66)
+    populate(999)
     print('Populating completed')
