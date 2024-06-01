@@ -6,16 +6,15 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>First App projects</title>
+    <title>Third App projects</title>
     <link rel="stylesheet" href="{% static 'css/styles.css' %}"/>
-<!--    <link rel="stylesheet" href="{{ STATIC_URL }}styles.css">-->
 
 </head>
 <body>
-<h1> Hi folks, it is model solutions</h1>
+<h1> Hi folks, it is forms solutions</h1>
 <h2> Here is all users </h2>
 <div class="djangomodels">
-    {% if birth_date %}
+    {% if first_name %}
     <table>
         <thead>
         <th> First Name </th>
@@ -24,12 +23,12 @@
         <th> Birth_date </th>
 
         </thead>
-    {% for date in birth_date %}
+    {% for name in first_name %}
     <tr>
-        <td>{{ date.first_name}}</td>
-        <td>{{ date.last_name}}</td>
-        <td>{{ date.email}}</td>
-        <td>{{ date.birth_date}}</td>
+        <td>{{ name.first_name}}</td>
+        <td>{{ name.last_name}}</td>
+        <td>{{ name.email}}</td>
+        <td>{{ name.birth_date}}</td>
     {% endfor %}
     </tr>
             </table>
