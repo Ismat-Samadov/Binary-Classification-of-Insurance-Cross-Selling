@@ -6,8 +6,8 @@ channel = "stable-23_11"
 
 [deployment]
 # run = ["sh", "-c", "cd temp_project && python manage.py runserver"]
-run = ["python3 Showoff/manage.py 0.0.0.0:8000"]
-
+# run = ["python3 Showoff/manage.py 0.0.0.0:8000"]
+run = ["python manage.py runserver 0.0.0.0:3000"]
 [[ports]]
 localPort = 8000
 externalPort = 80

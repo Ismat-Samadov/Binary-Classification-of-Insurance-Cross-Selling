@@ -149,3 +149,13 @@ DATE_INPUT_FORMATS = [
     "%d %B %Y",  # '25 October 2006'
     "%d %B, %Y",  # '25 October, 2006'
 ]
+X_FRAME_OPTIONS = '*'
+ALLOWED_HOSTS = [
+    '9ef99c51-0422-4674-b693-3befd2854e57-00-3dc2ln41ojsd6.kirk.replit.dev',
+    'localhost',
+    '127.0.0.1',
+    '9ef99c51-0422-4674-b693-3befd2854e57-00-3dc2ln41ojsd6.kirk.replit.dev'
+]
+CSRF_TRUSTED_ORIGINS = [
+    'https://9ef99c51-0422-4674-b693-3befd2854e57-00-3dc2ln41ojsd6.kirk.replit.dev',
+]
