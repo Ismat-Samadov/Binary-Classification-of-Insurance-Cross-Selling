@@ -1,0 +1,6 @@
+venv
+.vscode
+.kaggle
+.env
+.csv
+.zip
