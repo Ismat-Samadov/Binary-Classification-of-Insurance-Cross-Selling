@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --animate-drop: drop 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  --animate-win-pulse: win-pulse 0.8s ease-in-out infinite;
+  --animate-fade-in: fade-in 0.4s ease-out both;
+}
+
+@keyframes drop {
+  0% {
+    transform: translateY(-420px);
+    opacity: 0.6;
+  }
+  75% {
+    transform: translateY(6px);
+  }
+  88% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes win-pulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% {
+    transform: scale(1.12);
+    filter: brightness(1.4);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-geist-sans, Arial, Helvetica, sans-serif);
+}
